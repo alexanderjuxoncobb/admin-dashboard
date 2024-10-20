@@ -1,0 +1,87 @@
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(200px, 0.8fr) 3fr;
+  grid-template-rows: minmax(200px, 0.8fr) 3fr;
+}
+
+.sidebar {
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgb(51, 144, 244);
+  color: white;
+}
+
+.sidebar > * {
+  margin-left: -25px;
+}
+
+#sidebar1 {
+  font-size: max(3vw, 33px);
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar li {
+  font-size: max(1.5vw, 25px);
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 170px;
+}
+
+.sidebar ul {
+  width: 70%;
+}
+
+.sidebar button {
+  background: none;
+  color: white;
+  text-align: start;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header > div {
+  flex: 1;
+  align-items: center;
+}
+
+#top-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 60px;
+}
+
+#top-header > div {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
+input[type="search"] {
+  width: 40vw;
+  margin: 20px;
+}
+
+#bottom-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 60px;
+}
+
+#bottom-header > * {
+  margin: 5px 60px 5px 0px;
+}
+
+#bottom-header > div > * {
+  margin-right: 20px;
+}
+
+#bottom-header > :first-child {
+  display: flex;
+}
