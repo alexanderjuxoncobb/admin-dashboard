@@ -149,6 +149,7 @@ button.create {
   background-color: rgb(51, 144, 244);
   color: white;
   border-radius: 20px;
+  border: none;
   --my-height: 40px;
 
   height: var(--my-height);
@@ -181,6 +182,7 @@ button.create {
   padding: 30px;
   overflow-y: auto;
   height: 75vh;
+  margin-top: 5px;
 }
 
 .card {
@@ -222,9 +224,28 @@ p {
   padding: 20px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.2); */
   font-size: small;
   height: calc(100% / 3);
+  position: relative;
+}
+
+/* .card-announcements:not(:last-child) {
+    border-bottom: 3px solid;
+} */
+
+.card-announcements::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15px; /* Offset from the left */
+  right: 15px; /* Offset from the right */
+  height: 1px;
+  background-color: #000000; /* Color of the line */
+}
+
+.card-announcements:last-child::after {
+  display: none;
 }
 
 h4 {
@@ -257,4 +278,8 @@ h4 {
 .trending > :nth-child(3n) {
   font-weight: 100;
   align-self: start;
+}
+
+button:hover {
+  transform: translateY(-2px);
 }
